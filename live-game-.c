@@ -7,6 +7,15 @@
 #define High 25  // 游戏画面尺寸
 #define Width 50
 
+void clean(int x,int y)//类似于清屏函数
+{
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD pos;
+    pos.X = x;
+    pos.Y = y;
+    SetConsoleCursorPosition(handle,pos);
+}
+
 void init() // 数据初始化
 {
 	int i,j;
